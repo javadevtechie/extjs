@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <link href="http://cdn.sencha.io/ext/gpl/4.2.1/resources/css/ext-all-neptune.css" rel="stylesheet" />
+    <script src="http://cdn.sencha.com/ext/gpl/4.2.1/ext-all.js"></script>
+    <script type="text/javascript">
+
+var com= Ext.create('Ext.Panel', {
+    width: 500,
+    height: 300,
+    title: "HBoxLayout Panel",
+    layout: {
+        type: 'hbox',
+        align: 'stretch'
+    },
+    renderTo: document.body,
+    items: [{
+        xtype: 'panel',
+        title: 'Inner Panel One',
+        flex: 2
+    },{
+        xtype: 'panel',
+        title: 'Inner Panel Two',
+        flex: 1
+    },{
+        xtype: 'panel',
+        title: 'Inner Panel Three',
+        flex: 1
+    }]
+});
+        
+
+
+        // it is like main function in java
+        Ext.application({
+            name: 'MyAPp',
+            launch: function () {
+                Ext.create('Ext.container.Viewport', {
+                    xtype: 'tabpanel',
+                    items: [com]
+                });
+            }
+        });
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

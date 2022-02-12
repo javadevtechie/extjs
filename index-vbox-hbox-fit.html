@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <link href="http://cdn.sencha.io/ext/gpl/4.2.1/resources/css/ext-all-neptune.css" rel="stylesheet" />
+    <script src="http://cdn.sencha.com/ext/gpl/4.2.1/ext-all.js"></script>
+    <script type="text/javascript">
+        var childComponet1 = Ext.create('Ext.Panel', {
+            title: 'child panel-1',
+            height: 100,
+            width: '50%',
+
+            items: [
+                {
+                    xtype: 'label',
+                    forId: 'myFieldId',
+                    text: 'My Awesome Field',
+                    margin: '0 0 0 10'
+                }
+            ]
+        });
+        var childComponet2 = Ext.create('Ext.Panel', {
+            title: 'child panel-2',
+            height: 100,
+            width: 200
+            
+        });
+        var childComponet3 = Ext.create('Ext.Panel', {
+            title: 'child panel-3',
+            height: 100,
+            width: 200
+
+        });
+
+        var com = Ext.create('Ext.Panel', {
+            //config elements
+            title: 'parent panel',
+            width: 1000,
+            height: 1000,
+            layout: 'vbox',
+            renderTo: document.body,
+            items: [
+                childComponet1,
+                childComponet2,
+                childComponet3
+            ]
+        });
+
+        Ext.application({
+            name: 'MyAPp',
+
+            launch: function () {
+                Ext.create('Ext.container.Viewport', {
+                    xtype: 'tabpanel',
+                    items: [com]
+                });
+            }
+        });
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

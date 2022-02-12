@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <link href="http://cdn.sencha.io/ext/gpl/4.2.1/resources/css/ext-all-neptune.css" rel="stylesheet" />
+    <script src="http://cdn.sencha.com/ext/gpl/4.2.1/ext-all.js"></script>
+    <script type="text/javascript">
+        var com1=Ext.create('Ext.panel.Panel', {
+    title: 'Hello',
+    width: 200,
+    html: '<p>World!</p>',
+    renderTo: Ext.getBody()
+});
+        
+        
+        var com = Ext.create('Ext.panel.Panel', {
+            title: 'Accordion Layout',
+            width: 300,
+            height: 300,
+            margin: '10 10 10 300',
+            defaults: {
+                bodyStyle: 'padding:15px'
+            },
+            layout: {
+                type: 'accordion',
+                activeOnTop: true
+            },
+            items: [{
+                title: 'Panel 1',
+                html: 'Panel content!'
+            }, {
+                title: 'Panel 2',
+                html: 'Panel content!'
+            }, {
+                title: 'Panel 3',
+                html: 'Panel content!'
+            }],
+            renderTo: Ext.getBody()
+        });
+        // it is like main function in java
+        Ext.application({
+            name: 'MyAPp',
+            launch: function () {
+                Ext.create('Ext.container.Viewport', {
+                    xtype: 'tabpanel',
+                    items: [com,
+                    com1]
+                });
+            }
+        });
+
+    </script>
+</head>
+
+<body>
+     
+</body>
+
+</html>

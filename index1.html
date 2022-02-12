@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <link href="http://cdn.sencha.io/ext/gpl/4.2.1/resources/css/ext-all-neptune.css" rel="stylesheet" />
+    <script src="http://cdn.sencha.com/ext/gpl/4.2.1/ext-all.js"></script>
+    <script type="text/javascript">
+        var com = Ext.create('Ext.panel.Panel', {
+    title: 'Fit Layout',
+    width: 300,
+    height: 150,
+    layout:'fit',
+    items: {
+        title: 'Inner Panel',
+        html: 'This is the inner panel content',
+        bodyPadding: 20,
+        border: false
+    },
+    renderTo: Ext.getBody()
+});
+        Ext.application({
+            name: 'MyAPp',
+
+            launch: function () {
+                Ext.create('Ext.container.Viewport', {
+                    xtype: 'tabpanel',
+                    items: [com]
+                });
+            }
+        });
+
+    </script>
+</head>
+
+<body>
+     
+</body>
+
+</html>

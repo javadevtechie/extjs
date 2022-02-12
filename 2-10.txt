@@ -1,0 +1,61 @@
+ViewPort
+   componet where we will be render all the html into that layout
+
+        Ext.application({
+            name: 'MyApp',
+            launch: function () {
+                Ext.create('Ext.container.Viewport',{
+                    items : [
+                        {
+                            html :[
+                                'Hey Extjs \n',
+                                'hey hello wowl'
+                            ]
+                        } // componet
+                    ]
+                });
+            }
+        });
+
+creating component
+----------------------
+    var myComponent2= Ext.create('Ext.Component',{
+            html: 'My componet2'
+        });
+        var myComponent1= Ext.create('Ext.Component',{
+            html: 'My componet1'
+        });
+
+
+        Ext.application({
+            name: 'MyApp',
+            launch: function () {
+                Ext.create('Ext.container.Viewport',{
+                    items : [
+                    myComponent2,
+                    myComponent1
+                    ]
+                });
+            }
+        });
+
+
+
+--------------------------------------------------------------
+ Ext.application({
+            name: 'MyApp',
+            launch: function () {
+                Ext.create('Ext.container.Viewport', {
+                    items: [
+                        {
+                            xtype: 'component',
+                            html: 'My componet2'
+                        }, 
+                        {
+                            xtype: 'component',
+                            html: 'My componet1'
+                        }
+                    ]
+                });
+            }
+        });

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+
+    <link href="http://cdn.sencha.io/ext/gpl/4.2.1/resources/css/ext-all-neptune.css" rel="stylesheet" />
+    <script src="http://cdn.sencha.com/ext/gpl/4.2.1/ext-all.js"></script>
+    <script type="text/javascript">
+
+        var myComponet = Ext.create('Ext.Panel', {
+            width: 500,
+            height: 300,
+            title: "FormLayout Panel",
+            layout: 'form',
+            renderTo: Ext.getBody(),
+            bodyPadding: 5,
+            defaultType: 'textfield',
+            items: [{
+                fieldLabel: 'First Name',
+                name: 'first',
+                allowBlank: false
+            }, {
+                fieldLabel: 'Last Name',
+                name: 'last'
+            }, {
+                fieldLabel: 'Company',
+                name: 'company'
+            }, {
+                fieldLabel: 'Email',
+                name: 'email',
+                vtype: 'email'
+            }, {
+                fieldLabel: 'DOB',
+                name: 'dob',
+                xtype: 'datefield'
+            }, {
+                fieldLabel: 'Age',
+                name: 'age',
+                xtype: 'numberfield',
+                minValue: 0,
+                maxValue: 100
+            }, {
+                xtype: 'timefield',
+                fieldLabel: 'Time',
+                name: 'time',
+                minValue: '8:00am',
+                maxValue: '6:00pm'
+            },
+            {
+                xtype: 'button',
+                text: 'submit',
+                margin: '1 1 1 200'
+            }
+           
+            ]
+        });
+
+
+        Ext.application({
+            name: 'MyApp',
+            launch: function () {
+                Ext.create('Ext.container.Viewport', {
+                    xtype: 'tabpanel',
+                    items: [
+                        myComponet
+                    ]
+                });
+            }
+        });
+
+    </script>
+
+
+</head>
+
+
+<body>
+
+    <div id="MyDivId">
+
+    </div>
+
+</body>
+
+</html>
