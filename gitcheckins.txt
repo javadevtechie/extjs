@@ -1,0 +1,143 @@
+Microsoft Windows [Version 10.0.19043.1466]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\projects\extjs\extJsfoundation>git init
+Initialized empty Git repository in C:/projects/extjs/extJsfoundation/.git/
+
+C:\projects\extjs\extJsfoundation>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        2-10.txt
+        2-12
+        basic.html
+        index-accordion.html
+        index-anchor.html
+        index-auto.html
+        index-border.html
+        index-panel.html
+        index-vbox-hbox-fit.html
+        index.html
+        index1.html
+        jquery.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\projects\extjs\extJsfoundation>git add 2-10.txt
+
+C:\projects\extjs\extJsfoundation>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   2-10.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        2-12
+        basic.html
+        index-accordion.html
+        index-anchor.html
+        index-auto.html
+        index-border.html
+        index-panel.html
+        index-vbox-hbox-fit.html
+        index.html
+        index1.html
+        jquery.html
+
+
+C:\projects\extjs\extJsfoundation>git add *
+
+C:\projects\extjs\extJsfoundation>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   2-10.txt
+        new file:   2-12
+        new file:   basic.html
+        new file:   index-accordion.html
+        new file:   index-anchor.html
+        new file:   index-auto.html
+        new file:   index-border.html
+        new file:   index-panel.html
+        new file:   index-vbox-hbox-fit.html
+        new file:   index.html
+        new file:   index1.html
+        new file:   jquery.html
+
+
+C:\projects\extjs\extJsfoundation>git commit -m 'first commit'
+error: pathspec 'commit'' did not match any file(s) known to git
+
+C:\projects\extjs\extJsfoundation>git commit -m "first commit"
+[master (root-commit) 6956837] first commit
+ 12 files changed, 652 insertions(+)
+ create mode 100644 2-10.txt
+ create mode 100644 2-12
+ create mode 100644 basic.html
+ create mode 100644 index-accordion.html
+ create mode 100644 index-anchor.html
+ create mode 100644 index-auto.html
+ create mode 100644 index-border.html
+ create mode 100644 index-panel.html
+ create mode 100644 index-vbox-hbox-fit.html
+ create mode 100644 index.html
+ create mode 100644 index1.html
+ create mode 100644 jquery.html
+
+C:\projects\extjs\extJsfoundation>"first commit"
+
+C:\projects\extjs\extJsfoundation>git branch -M main
+
+C:\projects\extjs\extJsfoundation>git remote add origin git@github.com:javadevtechie/extjs.git
+
+C:\projects\extjs\extJsfoundation>git push -u origin main
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 3.96 KiB | 578.00 KiB/s, done.
+Total 14 (delta 9), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (9/9), done.
+To github.com:javadevtechie/extjs.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+C:\projects\extjs\extJsfoundation>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   basic.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\projects\extjs\extJsfoundation>git add basic.html
+
+C:\projects\extjs\extJsfoundation>git commit -m "basic html changes"
+[main c59e080] basic html changes
+ 1 file changed, 1 insertion(+)
+
+C:\projects\extjs\extJsfoundation>git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 306 bytes | 51.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:javadevtechie/extjs.git
+   6956837..c59e080  main -> main
+
+C:\projects\extjs\extJsfoundation>
