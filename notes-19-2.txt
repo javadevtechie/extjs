@@ -1,0 +1,147 @@
+COntroller
+store(temporery data)
+model
+
+json
+
+
+interchanging the data across the systems
+   save employee (id , name, designation,salary)
+   
+standerds
+  send fresh data- post
+backend-  save operation (sending data to db)
+          Post
+       -fetch data from the db
+          GET
+       -update particular record  in the db 
+          PATCH 
+
+Rest-verbs
+---------
+post ->
+get 
+patch
+OPTIONS
+
+   Rest services 
+    -> expecting the json from the user
+      javascript object notation
+
+Object- json
+      {
+	"name":"lalit",
+	"id": "232323"
+      }
+
+
+URL
+ 
+ DomainName/projectName/endpoint
+Get api- https://lsclintrials-common.int.singularity.clarivate.com/clinical_trials/v1.0/items/urn:clinicalTrials:636979
+employee
+
+ [ {
+	"name":"lalit",
+	"id": "232323"
+  },
+{
+	"name":"lalit",
+	"id": "232323"
+  },
+{
+	"name":"lalit",
+	"id": [{"name": "xym"},
+		{"age":"44"}]
+  }
+]
+
+
+   Requirement guys 
+      deverlop -save data into db
+               -fetch data from the db 
+               -delete record the db
+               -update record in the db
+  
+Backend developers
+save data into db
+   creating post end point
+        publishing the end point 
+            URL(end point): https://lsclintrials-common.int.singularity.clarivate.com/clinical_trials/v3.0/items/{pguid}
+            Requiremnts:
+            Method Type: Rest verbs(Get )
+            paramerters: what are all the thing you need to pass to url{pguid}
+            sample output:{
+										
+             }
+
+Grid
+   table 
+    searching
+    filter mechanism
+    
+
+
+columns: [
+    {
+        text: 'Name',
+        dataIndex: 'name',
+        sortable: false,  // column cannot be sorted
+        width: 250
+    },
+    {
+        text: 'Email',
+        dataIndex: 'email',
+        hidden: true  // column is initially hidden
+    },
+    {
+        text: 'Phone',
+        dataIndex: 'phone',
+        width: 100
+    }
+]
+
+
+
+
+    -> You have to be very cool
+    -> run the application 
+    -> know the flow 
+    why they have developed this application
+    -> navigate through out the appliation
+    -> take any one component
+          find out relevent files
+
+     
+
+1. Setup grid in your system
+2. understand flow by yourself
+3. 
+
+
+columns: [
+    {
+        text: 'Name',
+        dataIndex: 'name',
+        sortable: false,  // column cannot be sorted
+        width: 250
+    },
+    {
+        text: 'Email',
+        dataIndex: 'email',
+        hidden: true  // column is initially hidden
+    },
+    {
+        text: 'Phone',
+        dataIndex: 'phone',
+        width: 100
+    }
+]
+
+
+
+
+
+        
+
+

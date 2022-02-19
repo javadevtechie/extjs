@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+
+    <link href="http://cdn.sencha.io/ext/gpl/4.2.1/resources/css/ext-all-neptune.css" rel="stylesheet" />
+    <script src="http://cdn.sencha.com/ext/gpl/4.2.1/ext-all.js"></script>
+    <script type="text/javascript">
+Ext.define('User', {
+    extend: 'Ext.data.Model',
+    fields: [
+        {name: 'name',  type: 'string'},
+        {name: 'age',   type: 'int', convert: null},
+        {name: 'phone', type: 'string'},
+        {name: 'alive', type: 'boolean', defaultValue: true, convert: null}
+    ]
+});
+var user = Ext.create('User', {
+    id   : 'ABCD12345',
+    name : 'Conan',
+    age  : 24,
+    phone: '555-555-5555'
+});
+
+
+        Ext.application({
+            name: 'MyApp',
+            launch: function () {
+                Ext.create('Ext.container.Viewport', {
+                    xtype: 'panel',
+                    items: [
+                    user
+                    ]
+                });
+              
+            }
+        });
+
+    </script>
+
+
+</head>
+
+
+<body>
+
+    <div id="MyDivId">
+
+    </div>
+
+</body>
+
+</html>
