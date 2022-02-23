@@ -4,11 +4,17 @@ Ext.define ('MyApp.view.main.Extra',{
     id: 'testGrid',
     store :{type: 'extraApi'}, //store.extra
     columns :[
-        { text: 'Name',  dataIndex: 'name', width: 200 },
+        
+        { text: 'Name',  dataIndex: 'name', width: 200, filter:{
+            type: 'string'
+           
+        } 
+    },
         { text: 'Email', dataIndex: 'email', width: 250 },
         { text: 'Phone', dataIndex: 'phone', width: 120 },
         { text: 'Website', dataIndex: 'website', width: 120 }
     ],
+    plugins:'gridfilters',
     selModel:{
         injectCheckbox: 'first',
         checkOnly: true,
@@ -34,7 +40,7 @@ Ext.define ('MyApp.view.main.Extra',{
             handler :function(){
                 //alert();
               var data=  Ext.getCmp('testGrid').getSelectionModel().getSelection();
-              console.log(data);
+              console.log(data[0].data.name);
             }
 
         }
