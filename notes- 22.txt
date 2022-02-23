@@ -1,0 +1,56 @@
+there are two kinds of filters
+-> local filter( the data which you are able to see at webpage)
+-> remote filter
+
+
+
+ columns :[
+        
+        { text: 'Name',  dataIndex: 'name', width: 200, filter:{
+            type: 'string'
+        } 
+    },
+        { text: 'Email', dataIndex: 'email', width: 250 },
+        { text: 'Phone', dataIndex: 'phone', width: 120 },
+        { text: 'Website', dataIndex: 'website', width: 120 }
+    ]
+
+--------------------------------------------
+
+ { text: 'Name',  dataIndex: 'name', width: 200, filter:{
+            type: 'list',
+            options:['Leanne Graham','Glenna Reichert']
+        } 
+    }
+
+
+
+
+
+in the network tab you will be getting the all server calls
+
+
+
+
+        url:'https://jsonplaceholder.typicode.com/users'
+
+
+
+
+  { text: 'Name',  dataIndex: 'name', width: 200, filter:{
+            type: 'number'
+           
+        } 
+
+
+
+Ext.define('MyApp.store.ExtraApi',{
+    extend: 'Ext.data.Store',
+    alias: 'store.extraApi',
+    remoteFilter:true,
+    proxy: {
+        type:'ajax',
+        url:'https://jsonplaceholder.typicode.com/users'
+    },
+    autoLoad: true
+})
