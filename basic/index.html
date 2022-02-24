@@ -7,21 +7,24 @@
     <link href="http://cdn.sencha.io/ext/gpl/4.2.1/resources/css/ext-all-neptune.css" rel="stylesheet" />
     <script src="http://cdn.sencha.com/ext/gpl/4.2.1/ext-all.js"></script>
     <script type="text/javascript">
-Ext.define('User', {
-    extend: 'Ext.data.Model',
-    fields: [
-        {name: 'name',  type: 'string'},
-        {name: 'age',   type: 'int', convert: null},
-        {name: 'phone', type: 'string'},
-        {name: 'alive', type: 'boolean', defaultValue: true, convert: null}
-    ]
+var drawComponent = Ext.create('Ext.draw.Component', {
+    viewBox: false,
+    items: [{
+        type: 'circle',
+        fill: '#ffc',
+        radius: 100,
+        x: 100,
+        y: 100
+    }]
 });
-var user = Ext.create('User', {
-    id   : 'ABCD12345',
-    name : 'Conan',
-    age  : 24,
-    phone: '555-555-5555'
-});
+
+var ss=Ext.create('Ext.Window', {
+    width: 230,
+    height: 230,
+    layout: 'fit',
+    items: [drawComponent]
+}).show();
+
 
 
         Ext.application({
@@ -30,7 +33,7 @@ var user = Ext.create('User', {
                 Ext.create('Ext.container.Viewport', {
                     xtype: 'panel',
                     items: [
-                    user
+                    ss
                     ]
                 });
               

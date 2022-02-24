@@ -1,0 +1,78 @@
+Drag and Drop
+Themes
+Drwaing
+localization
+Trees
+
+Unit Testing with Jasmine
+
+
+https://wregen.github.io/dummy-ext-crud/
+
+{
+"country": "werwer"
+"established": "3234"
+"head_quaters": "erwer"
+"logo": "werwer"
+"name": "werwe"
+"slogan": "werw"
+"website": "werwer"
+
+}
+
+LocalDateTime lt
+            = LocalDateTime.now();
+
+
+https://www.google.com/search?q=localdatetime+current+time&rlz=1C1GCEA_enIN904IN904&oq=localdatetime+curr&aqs=chrome.0.0i457i512j69i57j0i512j0i22i30l7.11532j0j7&sourceid=chrome&ie=UTF-8
+
+
+
+
+    you have saved the data
+       by calling the api 
+    for that api param(payload)
+   
+what kind of information 
+    add new employee
+       name desi dob xyz
+
+
+  Two type 
+  SQL RDBMS,                                                       non-sql db
+  mulitple tables                                              one table , nodes 
+
+
+select * from employee where name like '%lalit%';
+
+
+
+
+
+
+
+person
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

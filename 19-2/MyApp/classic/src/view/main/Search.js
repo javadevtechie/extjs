@@ -1,7 +1,7 @@
 Ext.define('MyApp.view.main.Search',{
     extend: 'Ext.form.Panel',
     title: 'Add airLine',
-    controller :'controller.search',
+    controller :'search',
     defaultType: 'textfield',
     items:[{
         fieldLabel: 'Name',
